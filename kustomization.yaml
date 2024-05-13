@@ -1,21 +1,23 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+
+
+
 resources:
-  - ingress.yaml
-
-  - app/manifests/deployment.yaml
-  - app/manifests/service.yaml
-  - app/manifests/configmap.yaml
-
-  - log/manifests/deployment.yaml
-  - log/manifests/service.yaml
-  - log/manifests/configmap.yaml
-
-  - db/deployment.yaml
+- ingress.yaml
+- app/manifests/deployment.yaml
+- app/manifests/service.yaml
+- app/manifests/configmap.yaml
+- log/manifests/deployment.yaml
+- log/manifests/service.yaml
+- log/manifests/configmap.yaml
+- db/deployment.yaml
 
 images:
-  - name: PING/APP
-    newName: mluukkai/ping-pong:27
-  - name: PING/LOG
-    newName: mluukkai/log-output:11
+- name: PING/APP
+  newName: mluukkai/ping-pong
+  newTag: 10446e32ef9fcac4455de4b6b63077b0f4bc3d58
+- name: PING/LOG
+  newName: mluukkai/log-output
+  newTag: 10446e32ef9fcac4455de4b6b63077b0f4bc3d58
