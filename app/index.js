@@ -18,10 +18,10 @@ const getRandomNumber = () => {
   return Math.floor(Math.random() * 100) + 1;
 }
 
-const randomNumber = getRandomNumber();
+const randomNumber = 2 //getRandomNumber();
 
 let connection = false
-let broken = process.env.BROKEN === 'yes' || true
+let broken = process.env.BROKEN === 'false' || true
 
 const start = async () => {
   console.log('starting', randomNumber, ip.address())
