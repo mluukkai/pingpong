@@ -17,7 +17,7 @@ resources:
 images:
 - name: PING/APP
   newName: mluukkai/ping-pong
-  newTag: 833dedaaf01d62c2a7b37d6ea2b747428d2e3ad9
+  newTag: eeb5a6f4ca25cfd7b8c06c1384fec2d6e165357e
 - name: PING/LOG
   newName: mluukkai/log-output
-  newTag: 833dedaaf01d62c2a7b37d6ea2b747428d2e3ad9
+  newTag: eeb5a6f4ca25cfd7b8c06c1384fec2d6e165357e
