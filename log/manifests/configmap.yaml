@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: log-output-map
+data:
+  MESSAGE: "hello wurld"
+  information.txt: |
+    this data is comming from file
+    and it is stored in a configmap
