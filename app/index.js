@@ -100,7 +100,7 @@ app.get('/pingpong',  async (req, res) => {
   const pings = await getPings();
 
   await setPings(pings + 1);
-  res.send('<p>pong '+ (pings + 1) + '</p><p>' + randomNumber + '</p><p>' + ip.address() + '</p>');
+  res.send('<p>pong '+ (pings + 1) + '</p><p> random: ' + randomNumber + '</p><p>in ip ' + ip.address() + '</p>');
 });
 
 app.get('/pings', async (req, res) => {
