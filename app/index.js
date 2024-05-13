@@ -21,7 +21,7 @@ const getRandomNumber = () => {
 const randomNumber = 2 //getRandomNumber();
 
 let connection = false
-let broken = process.env.BROKEN === 'false' || true
+let broken = process.env.BROKEN === 'true' || false
 
 const start = async () => {
   console.log('starting', randomNumber, ip.address())
