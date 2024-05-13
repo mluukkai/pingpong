@@ -29,3 +29,16 @@ jobs:
         run: |-
           docker build --tag "mluukkai/log-output:$GITHUB_SHA" log
           docker push "mluukkai/log-output:$GITHUB_SHA"
+
+      - name: Set up Kustomize
+        uses: imranismail/setup-kustomize@v2
+
+      - name: tag image
+        run: |- 
+          kustomize edit set image PING/APP=mluukkai/ping-pong:$GITHUB_SHA
+          kustomize edit set image PING/LOG=mluukkai/log-output:$GITHUB_SHA
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: 'kustomization.yaml'
+          message: New version release ${{ github.sha }}

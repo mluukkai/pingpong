@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
         - name: log-output
-          image: mluukkai/log-output:11
+          image: PING/LOG
           env:
             - name: MESSAGE
               valueFrom:

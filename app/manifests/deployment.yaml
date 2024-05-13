@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: ping-pong
-          image: mluukkai/ping-pong:27
+          image: PING/APP
           env:
             - name: CONNECT_STRING
               valueFrom:

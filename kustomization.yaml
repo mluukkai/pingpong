@@ -13,3 +13,9 @@ resources:
   - log/manifests/configmap.yaml
 
   - db/deployment.yaml
+
+images:
+  - name: PING/APP
+    newName: mluukkai/ping-pong:27
+  - name: PING/LOG
+    newName: mluukkai/log-output:11
